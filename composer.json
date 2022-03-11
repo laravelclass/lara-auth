@@ -1,0 +1,31 @@
+{
+    "name": "laravelclass/lara-auth",
+    "description": "this package provides convenient way for laravel auth",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "laravel class",
+            "email": "laravelclass2022@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelClass\\LaraAuth\\Providers\\LaraAuthProvider"
+            ],
+            "aliases": {
+                "LaraAuth": "LaravelClass\\LaraAuth\\Service\\Facade\\LaraAuth"
+            }
+        }
+    },
+    "require": {
+        "illuminate/support": "8.* | 9.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelClass\\LaraAuth\\": "src"
+        },
+        "files": ["src/helpers/makeMessage.php"]
+    }
+}
