@@ -165,6 +165,14 @@ if you want to send verify email or reset email,just return send...notificatoin 
 
 if you want to verify the email links,just return verify.... methods;
 
+## how to use package's middlewares
+
+```php
+->middleware('laraAuthEmail')  ==> for verify email 
+
+->middleware('laraAuthResetPassword')  ==> for password reset link
+```
+
 ## how to use queue for sending notification
 
 ```php
