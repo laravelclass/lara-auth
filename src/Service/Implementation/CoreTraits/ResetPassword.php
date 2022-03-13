@@ -48,7 +48,7 @@ trait ResetPassword
 
         DB::table('password_resets')->insert(['email'=>$notifiable->email,'token' => $token,'created_at' => Carbon::now()]);
 
-        $queueRules = config('laraAuth.email.verifyEmail.queue.'.$guard);
+        $queueRules = config('laraAuth.email.resetPassword.queue.'.$guard);
 
         if ($queueRules['state'])
         {
